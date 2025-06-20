@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data P2H Harian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Data Harian P2H</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>No. Polisi</th>
+          <th>Jenis</th>
+          <th>Kondisi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <a href="index.html" class="btn">Kembali ke Form</a>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Tampilkan data dari localStorage
+    const data = JSON.parse(localStorage.getItem('p2hData')) || [];
+    const tableBody = document.querySelector('#dataTable tbody');
+    
+    data.forEach(item => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.tanggal}</td>
+        <td>${item.nopol}</td>
+        <td>${item.jenis}</td>
+        <td>${item.kondisi}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  </script>
+</body>
+</html>
