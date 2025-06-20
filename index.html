@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form P2H Kendaraan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Form P2H Kendaraan</h1>
+    <form id="p2hForm">
+      <label for="tanggal">Tanggal:</label>
+      <input type="date" id="tanggal" required>
+
+      <label for="nopol">Nomor Polisi:</label>
+      <input type="text" id="nopol" placeholder="B 1234 XYZ" required>
+
+      <label for="jenis">Jenis Kendaraan:</label>
+      <select id="jenis" required>
+        <option value="">-- Pilih --</option>
+        <option value="Truk">Truk</option>
+        <option value="Pickup">Pickup</option>
+        <option value="Mobil">Mobil</option>
+      </select>
+
+      <label for="kondisi">Kondisi:</label>
+      <select id="kondisi" required>
+        <option value="">-- Pilih --</option>
+        <option value="Baik">Baik</option>
+        <option value="Rusak">Rusak</option>
+      </select>
+
+      <button type="submit">Simpan Data</button>
+    </form>
+    <a href="data.html" class="btn">Lihat Data Harian</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
